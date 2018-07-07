@@ -195,49 +195,57 @@ objects:
   kind: "PersistentVolumeClaim"
   metadata:
     name: "system-storage"
+    annotations:
+      volume.beta.kubernetes.io/storage-class: glusterfs-storage
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/glusterfs
   spec:
     accessModes:
       - "ReadWriteMany"
     resources:
       requests:
         storage: "100Mi"
-    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
   metadata:
     name: "mysql-storage"
+    annotations:
+      volume.beta.kubernetes.io/storage-class: glusterfs-storage
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/glusterfs
   spec:
     accessModes:
       - "ReadWriteOnce"
     resources:
       requests:
         storage: "1Gi"
-    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
   metadata:
     name: "system-redis-storage"
+    annotations:
+      volume.beta.kubernetes.io/storage-class: glusterfs-storage
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/glusterfs
   spec:
     accessModes:
       - "ReadWriteOnce"
     resources:
       requests:
         storage: "1Gi"
-    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
   metadata:
     name: "backend-redis-storage"
+    annotations:
+      volume.beta.kubernetes.io/storage-class: glusterfs-storage
+      volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/glusterfs
   spec:
     accessModes:
       - "ReadWriteOnce"
     resources:
       requests:
         storage: "1Gi"
-    storageClassName: glusterfs
 
 - apiVersion: v1
   kind: DeploymentConfig
