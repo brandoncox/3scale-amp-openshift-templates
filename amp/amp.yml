@@ -201,6 +201,7 @@ objects:
     resources:
       requests:
         storage: "100Mi"
+    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
@@ -212,6 +213,7 @@ objects:
     resources:
       requests:
         storage: "1Gi"
+    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
@@ -223,6 +225,7 @@ objects:
     resources:
       requests:
         storage: "1Gi"
+    storageClassName: glusterfs
 
 - apiVersion: "v1"
   kind: "PersistentVolumeClaim"
@@ -234,6 +237,7 @@ objects:
     resources:
       requests:
         storage: "1Gi"
+    storageClassName: glusterfs
 
 - apiVersion: v1
   kind: DeploymentConfig
